@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import {
+  teste,
   getProject,
   getProjects,
   getTopProjects
@@ -11,5 +12,6 @@ const router = Router();
 router.get('/projects', getProjects);
 router.get('/projects/:id', getProject);
 router.get('/top-projects', getTopProjects);
+router.get('/teste', teste)
 
 export default router;

@@ -1,6 +1,14 @@
 import Project from '../models/project.js';
 import Issue from '../models/issue.js';
 
+import { createSession } from '../microservice/session.js';
+
+export const teste = async (_, res) => {
+  const data = await createSession(999);
+  console.log(9999999, data)
+  res.json({ oi: 'oi' });
+}
+
 export const getProjects = (_, res) => {
   Project.find({}, (err, projects) => {
     res.json(projects.map(item => ({
